@@ -79,7 +79,7 @@ formElement.addEventListener('submit', function(e) {
     e.preventDefault();
 })
 
-textAreaElement.addEventListener('change', function(e) {
+textAreaElement.addEventListener('keyup', function(e) {
   if(!e.target.value) {
     playButton.setAttribute('disabled', true);
   } else {
