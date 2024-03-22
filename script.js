@@ -4,9 +4,15 @@ const playButton = document.getElementById('play');
 const stopButton = document.getElementById('stop');
 const synth = window.speechSynthesis;
 
-formElement.addEventListener('submit', function(e) {
-    e.preventDefault();
-})
+function welcome() {
+  // voice assistant
+  const utterThis = new SpeechSynthesisUtterance(`Welcome!`);
+  const synth = window.speechSynthesis;
+  synth.speak(utterThis);
+}
+
+window.onload = welcome;
+
 
 function togglePlayStop(isPlaying) {
     if(isPlaying) {
@@ -67,6 +73,10 @@ function stopSpeak() {
     synth.cancel();
     textAreaElement.removeAttribute('disabled', true);
 }
+
+formElement.addEventListener('submit', function(e) {
+    e.preventDefault();
+})
 
 textAreaElement.addEventListener('change', function() {
     playButton.removeAttribute('disabled', true);
