@@ -6,6 +6,7 @@ const synth = window.speechSynthesis;
 
 function welcome() {
   // voice assistant
+  textAreaElement.innerHTML = "Hi, Welcome to my App! Enter your Text Here";
   const utterThis = new SpeechSynthesisUtterance(`Welcome!`);
   const synth = window.speechSynthesis;
   synth.speak(utterThis);
@@ -78,8 +79,12 @@ formElement.addEventListener('submit', function(e) {
     e.preventDefault();
 })
 
-textAreaElement.addEventListener('change', function() {
+textAreaElement.addEventListener('change', function(e) {
+  if(!e.target.value) {
+    playButton.setAttribute('disabled', true);
+  } else {
     playButton.removeAttribute('disabled', true);
+  }
 });
 textAreaElement.addEventListener('paste', function() {
     playButton.removeAttribute('disabled', true);
