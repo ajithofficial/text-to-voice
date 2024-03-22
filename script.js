@@ -7,7 +7,7 @@ const synth = window.speechSynthesis;
 
 function welcome() {
   // voice assistant
-  textAreaElement.innerHTML = "Hi, Welcome to my App! Enter your text here...";
+  textAreaElement.innerHTML = "Hi! Enter your text here...";
   // const utterThis = new SpeechSynthesisUtterance(`Welcome!`);
   // const synth = window.speechSynthesis;
   // synth.speak(utterThis);
