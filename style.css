@@ -1,0 +1,12 @@
+.hide {
+    display: none;
+}
+
+#play {
+    cursor: pointer;
+}
+
+
+#play:disabled {
+    cursor: not-allowed;
+}
