@@ -2,14 +2,19 @@ const formElement = document.getElementById('form');
 const textAreaElement = document.getElementById('text-area');
 const playButton = document.getElementById('play');
 const stopButton = document.getElementById('stop');
+const aboutMeElement = document.getElementById('about-me');
 const synth = window.speechSynthesis;
 
 function welcome() {
   // voice assistant
   textAreaElement.innerHTML = "Hi, Welcome to my App! Enter your text here...";
-  const utterThis = new SpeechSynthesisUtterance(`Welcome!`);
-  const synth = window.speechSynthesis;
-  synth.speak(utterThis);
+  // const utterThis = new SpeechSynthesisUtterance(`Welcome!`);
+  // const synth = window.speechSynthesis;
+  // synth.speak(utterThis);
+  // About me
+  aboutMeElement.addEventListener('click', () => {
+      window.open('https://www.linkedin.com/in/iamajithak/', '_blank');
+  });
 }
 
 window.onload = welcome;
