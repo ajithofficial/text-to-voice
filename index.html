@@ -24,15 +24,16 @@
   </head>
   <body>
     <div class="w-full h-full absolute bg-black">
-      <h1 class="text-white text-3xl font-bold text-center mt-36">Welcome</h1>
       <form
         id="form"
         class="p-10 min-w-min max-w-xl max-h-fit rounded-md border border-white text-white absolute m-auto top-0 bottom-0 right-10 left-10"
       >
+
+      <h1 class="sticky text-white text-3xl font-bold text-center mb-5">Welcome</h1>
         <h1 class="text-center font-bold mb-2 text-1xl">Convert</h1>
         <h1 class="text-center font-bold mb-5 text-2xl">Text&nbsp;&nbsp;<span class="text-sm font-serif">to</span>&nbsp;Voice</h1>
         <textarea
-          class="w-full min-h-28 rounded-sm p-2 text-black"
+          class="w-full min-h-28 max-h-80 rounded-sm p-2 text-black"
           maxlength="700"
           id="text-area"
           name="text-area"
@@ -93,7 +94,7 @@
           &nbsp;Stop
         </button> -->
       </form>
-      <div class="w-full fixed bottom-0 flex items-center justify-center">
+      <div class="w-full bg-black fixed bottom-0 flex items-center justify-center">
         <div class="text-white font-bold cursor-pointer m-3" id="about-me">👋 About Me</div>
       </div>
     </div>
